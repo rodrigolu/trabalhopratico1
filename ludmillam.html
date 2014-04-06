@@ -11,7 +11,9 @@
 <h1>Gestão de configuração</h1>
 <h2>Responsabilidades</h2>
 <p>A gerência de configuração é atividade exercida por três papéis, cujas responsabilidades são descritas na tabela abaixo.</p>
+</br>
 	<img src="figura1.png">
+</br>
 <h2>Versionamento</h2>
 <p>Os documentos relacionados ao projeto PJe são mantidos nesta wiki, no testlink e no Redmine. O versionamento adotado para os documentos será o disponível nas ferramentas citadas. Os códigos fontes, assim como artefatos de banco de dados, são mantidos no GIT. Seguem direcionamentos a respeito do versionamento dos artefatos.</p>
 </br>
@@ -30,10 +32,12 @@ PATCH</br>
 Número de correção de versão, modificado sempre que liberada uma versão de correção de erros críticos do sistema.</br></br>
 A Figura abaixo apresenta em detalhes como o processo ocorre. O repositório possui dois branches principais: o master, que recebe todas as modificações planejadas para a próxima versão, e o stable, que representa a versão atual em produção.</br>
 Quando a nova versão está prestes a ser lançada, é realizado um merge entre os branches master e stable. Neste mesmo momento, um branch para a versão atual é criado e mantido até que a nova versão estável esteja pronta para produção. Logo após o merge, inicia-se o período de estabilização da nova versão com o objetivo de corrigir eventuais bugs introduzidos pelas novas funcionalidades. Uma vez estável, uma tag é marcada e a versão está pronta para ser usada em produção e, após o lançamento da versão, inicia-se o ciclo de manutenção.</br>
+</br>
 	<img src="figura2.png">
 </br>
 <b>Nomes das versões do sistema</b>
 <p>As versões intermediárias do sistema receberão o nome de município brasileiro iniciado na letra de referência da versão, estas na ordem alfabética, que não contenha espaços ou caracteres especiais, obtidos a partir do nome das unidades federativas, essas na ordem alfabética inversa. Assim, por exemplo, temos:</p>
+</br>
 	<img src="figura3.png">
 </br>
 </br>
@@ -56,7 +60,29 @@ pjescript_importacao_<versaodestino>_<descricao>.sql</br>
 pjescript_conversao_<vorigem>-<vdestino>_descricao.sql</br>
 , onde a descrição é opcional.</br>
 </br>
-Exemplos: • pjescript_importacao_1.0.1_cep.sql • pjescript_conversao_1.0.1-1.0.1.sql • pjescript_importacao_1.0.1_cnae.sql
+Exemplos: • pjescript_importacao_1.0.1_cep.sql • pjescript_conversao_1.0.1-1.0.1.sql • pjescript_importacao_1.0.1_cnae.sql</br>
+</br>
+<b>Repositórios distribuídos</b></br>
+</br>
+O GIT tem sido amplamente adotado em projetos de código e desenvolvimento abertos por permitir a coordenação de várias equipes de desenvolvimento de forma simples e transparente.</br>
+A próxima figura apresenta uma organização de repositórios distribuídos com três papéis distintos. A disposição é formada por um repositório central (CNJ Abençoado), sob responsabilidade dos líderes do projeto, e repositórios locais para cada equipe participante do desenvolvimento.</br> 
+Cada um dos repositórios locais tem uma equipe formada por desenvolvedores, revisores de código e um ou mais gestores. O processo de desenvolvimento estende fluxo definido em Fluxo de trabalho, acrescentando os seguintes passos:</br>
+1-Os desenvolvedores resolvem issues e submetem as alterações nos repositórios locais através de branches específicos e solicitações de merge.</br>
+2-Os revisores testam e aprovam as solicitações, reintegrando os branches ao master.</br>
+3-Uma vez revisado, testado e aprovado, o gestor do repositório local submete a alteração para o repositório central e aguarda aprovação dos gestores do projeto.</br>
+</br>
+Essa disposição traz duas vantagens em relação aos SCVs centralizados:</br>
+(i) as equipes de locais de desenvolvimento têm total liberdade de organização; (ii) os líderes do projeto possuem total controle sobre o código submetido.</br>
+</br>
+	<img src="figura5.png">
+</br>
+<b>Política de acesso</b></br>
+</br>
+O PJe encerra um desenvolvimento colaborativo intenso que envolve múltiplas fábricas de software e analistas de sistemas, muitas vezes não localizados no mesmo ponto geográfico brasileiro. Em razão disso e da intensa necessidade de controle do código fonte com vistas a evitar um desenvolvimento não controlado, o acesso aos artefatos do sistema deve ser bem controlado</br>
+Deve-se identificar esses acessos segundo os seguintes papéis:</br>
+</br>
+	<img src="figura6.png">
+</br>
 	
 <h1>Gestão de Versões</h1>
 <p>Softwares de controle de verso são sistemas que registram as alterações em um conjunto de arquivos ao longo do tempo de modo a permitir a recuperação de versões específicas quando necessário.</p>
@@ -71,7 +97,10 @@ Além de registrar as alterações de um conjunto de arquivos, os sistema de contro
 <h2>Sistemas de Controle de Versão Distribuídos</h2>
 <p>É aí que surgem os Sistemas de Controle de Versão Distribuídos (Distributed Version Control System ou DVCS). Em um DVCS (tais como Git, Mercurial, Bazaar or Darcs), os clientes não apenas fazem cópias das últimas versões dos arquivos: eles são cópias completas do repositório. Assim, se um servidor falha, qualquer um dos repositórios dos clientes pode ser copiado de volta para o servidor para restaurá-lo. Cada checkout (resgate) é na prática um backup completo de todos os dados.</p>
 <p>Além disso, muitos desses sistemas lidam muito bem com o aspecto de ter vários repositórios remotos com os quais eles podem colaborar, permitindo que você trabalhe em conjunto com diferentes grupos de pessoas, de diversas maneiras, simultaneamente no mesmo projeto. Isso permite que você estabeleça diferentes tipos de workflow (fluxo de trabalho) que não são possíveis em sistemas centralizados, como por exemplo o uso de modelos hierárquicos.</p>
-
+</br>
+</br>
+FONTE: <u> href=http://www.cnj.jus.br/wikipje/index.php/GIT#Gest.C3.A3o_de_configura.C3.A7.C3.A3o</u></br>
+		  <u>file:///F:/T%C3%89CNICO%20EM%20INFORM%C3%81TICA/Git%20-%20Sobre%20Controle%20de%20Vers%C3%A3o.htm</u>
 
 </body>
 </html>	
