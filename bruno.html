@@ -10,7 +10,6 @@
 <h1>GITHUB</h1>
 <br>
 <h2>A HISTORIA DO GITHUB</h2>
-<br>
 <p>GitHub é um Serviço de Web Hosting Compartilhado para projetos que usam o controle de versionamento Git. É escrito em Ruby on Rails, O GitHub possui planos comerciais e gratuitos para projetos de código aberto.</p>
 <br>
 <p>Podemos encontrar nele informações sobre todos os commits (atualizações) dos projetos que o
@@ -20,19 +19,44 @@ está realizando, entre outras novidades.</p>
 <p> site oficial: http://github.com </p>
 <br>
 <h1> Criadores do GITHUB</h1>
-<br>
 <p>O GITHUB Foi criado pelos desenvolvedores da Logical Awesome (Chris Wanstrath, PJ Hyett e Tom Preston - Wernder).</p>
 <br>
 <h1> Funcionalidades do GITHUB </h1>
-<br>
 <p> Este site possui funcionalidades de uma rede social como feeds, followers, wiki e um gráfico que mostra como os desenvolvedores trabalham as versões de seus repositórios. O GitHub também possui um serviço parecido com o pastebin chamado Gist.</p>
 <br>
 <h1> Comandos GITHUB </h1>
+<b>Criar um usuário no Github</b>
 <p> Como Criar um usuário no Github: Acesse http://github.com/ -> Pricing and Signup -> Escolher um plano e “Create an
 account” (Possui planos free) -> Escrever seus dados e seguir os passos de costume.</p>
-
-
-
+<b>Criando as chaves públicas</b>
+<p>? Acessar http://github.com/</p>
+<p>? Fazer login </p>
+<p>? Account Settings</p>
+<p>? SSH Public Keys</p>
+<p>? Add another public key</p>
+<p>? No lado direito tem um Help: “Need help with public keys?” - Siga os passos lá citados</p>
+<p>? Use o comando a seguir no Terminal parar gerar a chave</p>
+<p>$ cat ~/.ssh/id_rsa.pub</p>
+<p>? Cole essa chave no campo Key e escolha um Title de sua preferência (Ex: Minha chave)</p>
+<p>? Clique em Add Key e a chave será criada</p>
+<p>Pode-se testar se a chave foi corretamente criada com o comando:$ ssh git@github.com</p>
+<br>
+<b>Configurando o Git</b>
+<p>? Configure seu usuário Git com os comandos</p>
+<p>$ git config --global user.name "Your Name"</p>
+<p>$ git config --global user.email youremail@gmail.com</p>
+<b>Criando seu projeto e seu repositório</b>
+<p>? Vá em http://www.github.com em sua Dashboard e procure por “New Repository” e
+preencha os campos.
+<p>? Agora você deve criar o diretório para o repositório criado em seu computador. Use os comandos:</p>
+<p>$ mkdir ~/YourProjectName</p>
+<p>$ cd ~/YourProjectName</p>
+<p>$ git init</p>
+<p>$ touch README</p>
+<p>$ git add README</p>
+<p>$ git commit -m 'first commit'</p>
+<p>$ git remote add origin git@github.com:username/Hello-World.git</p>
+<p>$ git push origin master</p>
 
 </body>
 </html>
