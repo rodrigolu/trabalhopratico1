@@ -21,8 +21,43 @@ MAJOR</br>
 Número principal da versão, somente alterado quando:</br>
     a)há modificação de arquitetura do sistema, ainda que não tenha havido modificação da estrutura de dados;</br>
     b)há modificação da estrutura de dados que demanda uma migração significativa de uma base para outra base de dados, não sendo suficiente a mera concretização de scripts de migração de dados entre tabelas de um mesmo banco de dados.</br>
-Esse número deve ser 0 para a versão anterior à primeira.
+Esse número deve ser 0 para a versão anterior à primeira.</br>
+MINOR</br>
+Número menor de versão, modificado sempre que houver inclusão de um ou mais conjuntos de novas funcionalidades. Esse número deve iniciar em 0 e deve ser reiniciado quando da troca do número principal.</br>
+MICRO</br>
+Número micro de versão, modificado sempre que liberada uma versão de correção de erros ou de comportamento esperado na versão do sistema. Esse número deve iniciar em 0 e deve ser reiniciado quando da troca do número intermediário ou do número principal. Para versões intermediárias ou principais novas, antes da homologação, esse número deverá ser acrescido do milestone de liberação (M1, M2, M3 etc.) até que a versão seja homologada, quando receberá o número menor.</br>
+PATCH</br>
+Número de correção de versão, modificado sempre que liberada uma versão de correção de erros críticos do sistema.</br></br>
+A Figura abaixo apresenta em detalhes como o processo ocorre. O repositório possui dois branches principais: o master, que recebe todas as modificações planejadas para a próxima versão, e o stable, que representa a versão atual em produção.</br>
+Quando a nova versão está prestes a ser lançada, é realizado um merge entre os branches master e stable. Neste mesmo momento, um branch para a versão atual é criado e mantido até que a nova versão estável esteja pronta para produção. Logo após o merge, inicia-se o período de estabilização da nova versão com o objetivo de corrigir eventuais bugs introduzidos pelas novas funcionalidades. Uma vez estável, uma tag é marcada e a versão está pronta para ser usada em produção e, após o lançamento da versão, inicia-se o ciclo de manutenção.</br>
+	<img src="figura2.png">
 </br>
+<b>Nomes das versões do sistema</b>
+<p>As versões intermediárias do sistema receberão o nome de município brasileiro iniciado na letra de referência da versão, estas na ordem alfabética, que não contenha espaços ou caracteres especiais, obtidos a partir do nome das unidades federativas, essas na ordem alfabética inversa. Assim, por exemplo, temos:</p>
+	<img src="figura3.png">
+</br>
+</br>
+<b>Versões de bibliotecas ou projetos utilitários do sistema</b>
+<p>As bibliotecas ou projetos utilitários do sistema receberão sua numeração seguindo as seguintes regras:</p></br>
+	<img src="figura4.png">
+</br>
+</br>
+<b>Versões de banco de dados</b>
+<p>Os dumps de bancos de dados seguirão a nomenclatura da versão a que estão vinculadas, acrescido de descritor de seu conteúdo, quando necessário.</p>
+Exemplos:</br>
+pjedb_1.0.1_treinamento.backup</br>
+pjedb_1.0.1_treinamentobin.backup</br>
+pjedb_1.0.1_limpa.backup</br>
+pjedb_1.0.1_limpabin.backup</br>
+pjedb_1.2.0_limpa.backup</br>
+</br>
+No caso de scripts de bancos de dados, deverá ser seguida a seguinte regra de nomenclatura:</br>
+pjescript_importacao_<versaodestino>_<descricao>.sql</br>
+pjescript_conversao_<vorigem>-<vdestino>_descricao.sql</br>
+, onde a descrição é opcional.</br>
+</br>
+Exemplos: • pjescript_importacao_1.0.1_cep.sql • pjescript_conversao_1.0.1-1.0.1.sql • pjescript_importacao_1.0.1_cnae.sql
+	
 <h1>Gestão de Versões</h1>
 <p>Softwares de controle de verso são sistemas que registram as alterações em um conjunto de arquivos ao longo do tempo de modo a permitir a recuperação de versões específicas quando necessário.</p>
 Além de registrar as alterações de um conjunto de arquivos, os sistema de controle de versão podem conter outras funcionalidades e são divididos em três categorias principais:</br>
