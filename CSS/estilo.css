@@ -1,0 +1,39 @@
+body{
+	font-family:Arial, san serifa;	
+}
+
+p{
+	text-align:justify:
+}
+
+h1{
+	background-color:#606060;
+	color:greenyellow;
+	font-size:30pt;
+	padding:10px;
+	text-shadow: 0px 0px 5px rgba(0,0,0,.5)
+
+}
+
+div#corpo{
+	width:1028px;
+	margin: -20px auto 0 auto;
+}
+
+img{
+	width:1028px;
+}
+
+a#home{
+	margin-bottom:0px;
+	background-color:greenyellow;
+	padding:10px;
+	text-decoration:none;
+	color:#ffffff;
+	transition: background-color 1s;
+	
+}
+
+a#home:hover{
+	background-color:green;
+}
