@@ -8,22 +8,17 @@
 
 
 <h1>GITHUB</h1>
-<br>
 <h2>A HISTORIA DO GITHUB</h2>
 <p>GitHub é um Serviço de Web Hosting Compartilhado para projetos que usam o controle de versionamento Git. É escrito em Ruby on Rails, O GitHub possui planos comerciais e gratuitos para projetos de código aberto.</p>
-<br>
 <p>Podemos encontrar nele informações sobre todos os commits (atualizações) dos projetos que o
 utilizam, uma rede social que possibilita que outras pessoas acompanhem o desenvolvimento de
 seu projeto, um recurso para visualizar gráficos de quantas atualizações cada pessoa no projeto
 está realizando, entre outras novidades.</p>
 <p> site oficial: http://github.com </p>
-<br>
 <h1> Criadores do GITHUB</h1>
 <p>O GITHUB Foi criado pelos desenvolvedores da Logical Awesome (Chris Wanstrath, PJ Hyett e Tom Preston - Wernder).</p>
-<br>
 <h1> Funcionalidades do GITHUB </h1>
 <p> Este site possui funcionalidades de uma rede social como feeds, followers, wiki e um gráfico que mostra como os desenvolvedores trabalham as versões de seus repositórios. O GitHub também possui um serviço parecido com o pastebin chamado Gist.</p>
-<br>
 <h1> Comandos GITHUB </h1>
 <b>Criar um usuário no Github</b>
 <p> Como Criar um usuário no Github: Acesse http://github.com/ -> Pricing and Signup -> Escolher um plano e “Create an
@@ -57,6 +52,39 @@ preencha os campos.
 <p>$ git commit -m 'first commit'</p>
 <p>$ git remote add origin git@github.com:username/Hello-World.git</p>
 <p>$ git push origin master</p>
-
+<b>Clonando um projeto do Github (com direitos de R/W no repositório)</b>
+<p>? Criar uma pasta no seu diretório do usuário (Ex: MeuRepositorio)</p>
+<p>? Entre nesse diretório pelo Terminal</p>
+<p>? Usar o git clone para clonar um projeto da web (Github) para seu pc, exemplo (*1): git</p>
+<p>clone git@github.com:taboca/TelaSocial.git</p>
+<b>Utilizando um projeto do Github</b>
+<p>De dentro do diretório criado, você pode usar os comandos:</p>
+<p>? $ git pull</p>
+<p>Atualiza os arquivos do seu pc conforme o que está no github (sempre lembre de usá-lo se imaginar que alguém possa ter feito algum commit)</p>
+<p>Fazendo commits:</p>
+<p>? Adicione o arquivo modificado no diretório criado</p>
+<p>? $ git status</p>
+<p>Mostra quais arquivos sofreram modificações (modificados ou inseridos ou deletados)</p>
+<p>? $ git add .</p>
+<p>Se novos arquivos foram adicionados esse comando irá adicioná-los ao projeto,do diretório atual pra baixo.</p>
+<p>? $ git commit -m “Comments ... ex: Changing the background color of file1...”</p>
+<p>Esse comando irá fazer o commit no repositório do Github, com o comentário que está entre aspas.</p>
+<p>? $ git push origin master</p>
+<p>Após executar esse comando deve aparecer na página do github, do projeto em que está trabalhando, suas modificações/commits.</p>
+<p>Desfazendo commits:</p>
+<p>Em alguns momentos talvez seja necessário desfazer algum commit, por exemplo, se você fez um commit de uma coisa errada, que não era pra ter feito.</p>
+<p>? $ git log</p>
+<p>Esse comando irá mostrar o histórico de commits Nesse histórico copie o código (um gigante) referente ao commit que quer desfazer</p>
+<p>? $ git revert codigoDoCommit</p>
+<p>Assim que executar esse comando abrirá um editor padrão para confirmar que</p>
+<p>quer reverter o commit e qual mensagem deseja que apareça nessa reversão</p>
+<p>(normalmente é só fechar o editor sem fazer modificações, e não precisa salvar o documento que abriu no editor)</p>
+<p>Com isso o commit será revertido, aparecerá em seu terminal uma mensagem parecida com a de quando um commit é feito</p>
+<p>? $ git push origin master</p>
+<p>Esse comando fará com que o revert apareça no histórico de commits no Github.</p>
+<p>(*1) - Para que isso funcione o dono do projeto que desejamos clonar deve ter dado</p>
+<p>permissão para seu usuário no Github.</p>
+<p>Se ele tiver dado permissão e mesmo assim estiver ocorrendo algum problema, tente usar isso (use case):</p>
+<p>? ssh-add _arquivo_da_key_mas_o_private_nao_o_public</p>
 </body>
 </html>
